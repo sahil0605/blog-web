@@ -1,5 +1,26 @@
 const Post = require("../models/post");
 
+exports.getAllPost = async(req,res)=>{
+    try{
+        const posts = await Post.find();
+        console.log(posts)
+        if(!posts){
+            return res.status(404).json({
+                message:"no posts"
+            })
+        }
+        return res.status(202).json({
+            message:"post retrieved",
+            posts :posts  
+        })
+    }catch(err){
+        console.log(err)
+        return res.status(500).json({
+            message:"internal server error"
+        })
+    }
+}
+
 exports.postData = async (req, res) => {
   try {
     console.log(req.user.name);
