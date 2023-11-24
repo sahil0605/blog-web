@@ -1,0 +1,10 @@
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  
+  /* p {
+    margin: 0;
+  } */

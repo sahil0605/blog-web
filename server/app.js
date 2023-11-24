@@ -8,7 +8,7 @@ app.use(cors());
 
 app.use(express.json())
 
-const PORT = 6000 || process.env.PORT;
+const PORT = 7000 || process.env.PORT;
 app.listen(PORT ,()=>{
     console.log(`server started on ${PORT}`)
 })
@@ -23,4 +23,5 @@ mongoose.connect(process.env.DB_URL).then(()=>{
 })
 app.use('/api/user',require('./routes/userRoute'))
 app.use("/api/user", require('./routes/postRoute'));
+
 

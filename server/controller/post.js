@@ -20,6 +20,27 @@ exports.getAllPost = async(req,res)=>{
         })
     }
 }
+exports.getMyPost = async(req,res)=>{
+  try{
+    const {username} = req.user
+      const posts = await Post.find(username);
+      console.log(posts)
+      if(!posts){
+          return res.status(404).json({
+              message:"no posts"
+          })
+      }
+      return res.status(202).json({
+          message:"post retrieved",
+          posts :posts  
+      })
+  }catch(err){
+      console.log(err)
+      return res.status(500).json({
+          message:"internal server error"
+      })
+  }
+}
 
 exports.postData = async (req, res) => {
   try {
