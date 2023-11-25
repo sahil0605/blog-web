@@ -19,6 +19,12 @@ function Navbar() {
         <li>
           <Link to="/profile">Profile</Link>
         </li>
+        <li>
+          <Link to="/signin">Signin</Link>
+        </li>
+        <li>
+          <Link to="/signup">Signup</Link>
+        </li>
       </ul>
     </div>
   );
