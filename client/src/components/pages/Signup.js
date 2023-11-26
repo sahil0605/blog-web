@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import "../pagecss/Signup.scss";
+import "../pagecss/Signup.css";
 import axios from "axios";
 
 const SignUp = () => {
@@ -26,18 +26,18 @@ const SignUp = () => {
     }
 
     try {
-        console.log(name)
       const res = await axios.post("http://localhost:7000/api/user/register", {
         name,
         email,
         password,
       });
+      console.log(res)
 
-      if (res.data.success) {
-        
+      if (res.status=201) {
         setSignUpSuccessful(true);
+        console.log("success")
         setTimeout(() => {
-          navigate("/home");
+          navigate("/signin");
         }, 2000);
       }
     } catch (error) {

@@ -3,7 +3,6 @@ const Post = require("../models/post");
 exports.getAllPost = async(req,res)=>{
     try{
         const posts = await Post.find();
-        console.log(posts)
         if(!posts){
             return res.status(404).json({
                 message:"no posts"
