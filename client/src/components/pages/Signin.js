@@ -34,6 +34,7 @@ const SignIn = () => {
       window.localStorage.setItem("user", JSON.stringify(result.data.user));
       setSignInSuccessful(true);
       console.log("succes")
+      console.log(result)
       setTimeout(() => {
         navigate("/");
       }, 1500);

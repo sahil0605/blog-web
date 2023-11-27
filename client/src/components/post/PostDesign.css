@@ -8,3 +8,31 @@
   /* p {
     margin: 0;
   } */
+  .button-dlt {
+    background-color:red;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px;
+  }
+  .button-dlt :hover{
+    background-color: rgba(255, 0, 0, 0.945);
+  }
+  .button-upd {
+    background-color:#4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    margin: 10px;
+  }
+  .btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }

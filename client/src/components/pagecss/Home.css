@@ -1,18 +1,31 @@
 .homepage-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    /* background-color: greenyellow; */
-  }
-  .homepage-container h1{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px; /* Added padding to center the content */
+}
+
+.homepage-container h1 {
+  padding: 10px;
+}
+
+.post-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .homepage-container {
+    max-width: 100%;
     padding: 10px;
   }
-  
+
   .post-container {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    padding: 10px;
   }
+}

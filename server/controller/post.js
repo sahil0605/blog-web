@@ -21,8 +21,9 @@ exports.getAllPost = async(req,res)=>{
 }
 exports.getMyPost = async(req,res)=>{
   try{
-    const {username} = req.user
-      const posts = await Post.find(username);
+    const user = req.user
+    console.log(user)
+      const posts = await Post.find({createdBy:user.name});
       console.log(posts)
       if(!posts){
           return res.status(404).json({
@@ -42,6 +43,7 @@ exports.getMyPost = async(req,res)=>{
 }
 
 exports.postData = async (req, res) => {
+
   try {
     console.log(req.user.name);
     const { name } = req.user;

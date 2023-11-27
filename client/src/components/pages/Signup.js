@@ -72,7 +72,7 @@ const SignUp = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleSubmit}>Sign Up</button>
+          <button onClick={handleSubmit} className="sign">Sign Up</button>
           {isSignUpSuccessful && (
             <div className="success-popup">Sign Up Successful! Now login.</div>
           )}
