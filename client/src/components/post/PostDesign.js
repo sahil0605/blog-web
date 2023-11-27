@@ -27,7 +27,7 @@ const Post = ({ post }) => {
   // const updateHandler = async()=>{
   // }
   return (
-    <div>
+    <div className='box'>
     <div className='box1'>
       <h3>Title : {post.title}</h3>
       <h3>Posted By : {post.createdBy}</h3>
@@ -43,7 +43,9 @@ const Post = ({ post }) => {
           </div>
         )}
       </div>
+      <div className='desc'>
       <p>{post.description}</p>
+      </div>
     </div>
   );
 };
